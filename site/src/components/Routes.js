@@ -6,18 +6,21 @@ import FamilyTree from './FamilyTree';
 import Guest from './Guest';
 import Login from './Login';
 import Profile from './Profile';
+import { directory } from '../assets/images/icons/directory';//set redux to make the links below dynamic
+import Gallery from './Gallery';
 
 export default class Routes extends React.Component {
   render() {
     return (
-      <main id = "MainContainer">
+      <main id = "main-container">
       <Switch>
         <Route exact path ="/" component = {Guest} />
         <Route exact path = "/info" component = {About} />
-        <Route exact path = "/events" component = {Events} />
+        <Route exact path = "/evenements" component = {Events} />
         <Route exact path = "/genealogie" component = {FamilyTree} />
-        <Route exact path = "/connection" component = {Login} />
-        <Route exact path = "/mon-profil" component = {Profile} />
+        <Route exact path = "/connexion" component = {Login} />
+        <Route exact path = "/profil" component = {Profile} />
+        <Route exact path = "/album" component = {Gallery} />
       </Switch>
     </main>
     );

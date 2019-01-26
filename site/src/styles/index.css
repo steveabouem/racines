@@ -1,14 +1,68 @@
+*{
+  transition: all 0.3s;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* font-family: 'Quicksand', sans-serif; */
+  font-family: 'Krub', sans-serif;
+  /* font-family: 'Fira Sans', sans-serif; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+a {
+  text-decoration: none;
+  font-weight: 600;
+  text-decoration: none;
 }
+
+#main-container {
+  max-width: 100%;
+  background: #f7faf4;
+}
+
+.navigation-top {
+  display: flex;
+  position: sticky;
+  top: 0;
+  max-width: 100%;
+  list-style: none;
+  background: #3ed9bc;
+  flex-direction: row;
+  padding: 0;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
+.navigation-top li {
+  margin: 0 2%;
+  padding: 2%;
+}
+
+.nav-link-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+}
+
+.material-icons {
+  color: white;
+  margin: 0 10% 0 0;
+}
+
+.navigation-top a {
+  color: #589187;
+}
+
+/* ==================EFFECTS================== */
+
+.navigation-top a:hover {
+  color: white;
+}
+
+.nav-link-container:hover > .material-icons {
+  transform: translateY(-5px) scale(1.05);
+  filter: opacity(1)!important;
+}
+
+/* ==================MOBILE================== */
