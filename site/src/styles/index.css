@@ -39,6 +39,10 @@ a {
   margin: 0 auto;
 }
 
+.navigation-top .material-icons {
+  margin: 0 10% 0 0;
+}
+
 .navigation-top li {
   margin: 0 2%;
   padding: 2%;
@@ -52,7 +56,6 @@ a {
 
 .material-icons {
   color: #58efdb;
-  margin: 0 10% 0 0;
 }
 
 .navigation-top a {
@@ -70,13 +73,14 @@ a {
 }
 
 .button-primary {
-  width: 200px;
+  width: 160px;
   margin: auto;
   display: flex;
   align-items: center;
   background: #5abaa7;
   color: #c9fff6;
   border-radius: 5px;
+  justify-content: center;
 }
 
 .button-primary:hover a {

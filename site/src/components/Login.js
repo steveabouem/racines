@@ -1,9 +1,11 @@
 import React from 'react';
 import Navigation from './layout/menus/Navigation';
+import LoginForm from './login/LoginForm';
+import SignUpForm from './login/SignupForm';
 import { content } from '../assets/content/navigationLinks';
-import { loginContent } from '../assets/content/loginForm';
 import Loader from './layout/modals/Loader';
 import ButtonPrimary from './layout/buttons/primary-submit';
+import { signUpContent, loginContent } from '../assets/content/loginForm';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -11,13 +13,25 @@ export default class Login extends React.Component {
     this.state = { 
       isLoading: true,
       language: 'french',//get it from redux props,
-      ishovered: false
+      ishovered: false,
+      isNewUser: true,
     };
-
+    this.switchForm=this.switchForm.bind(this);
     this.login = this.login.bind(this);
+    this.signup = this.signup.bind(this);
   }
   
-  login() {
+  switchForm() {
+    this.setState({
+      isNewUser: !this.state.isNewUser
+    });
+  }
+
+  login(e) {
+    console.log('pending');
+  }
+
+  signup(e) {
     console.log('pending');
   }
 
@@ -32,40 +46,38 @@ export default class Login extends React.Component {
       <div className='page-container' id='login'>
           <Navigation links={content[this.state.language].links} />
           {this.state.isLoading ? <Loader /> :
-          <div className='section-container'>
-            <div classNam='section-headers'>
-              <h1>
-                {loginContent.french.welcome}
-              </h1>
+            <div>
+              <div className='login-picker'>
+                {
+                  this.state.isNewUser ?
+                  signUpContent.french.processChangeTag
+                :
+                  loginContent.french.processChangeTag
+                }
+                <br/>
+                <ButtonPrimary
+                    name={'refresh'}
+                    value={
+                            this.state.isNewUser ?
+                            signUpContent.french.processChange
+                          :
+                            loginContent.french.processChange
+                          }
+                    onClick={this.switchForm}
+                />
+                </div>
+              {
+                this.state.isNewUser ?
+                <SignUpForm
+                  signup={e =>{this.signup(e);}}
+                />
+              :
+                !this.state.isNewUser && 
+                <LoginForm
+                  login={e =>{this.login(e);}}
+                />
+              }
             </div>
-            <form className='login-form'>
-              {loginContent.french.inputs.map(input => {
-                return (
-                  <div>
-                    <label htmlFor={input.for}>
-                      {input.label}
-                    </label>
-                    <br />
-                    <input
-                      type={input.type}
-                      placeholder={input.placeHolder && input.placeHolder}
-                    />
-                  </div>
-                );
-              })}
-              <ButtonPrimary
-                onClick={this.login}
-                value='Soumettre'
-                name='check_box'
-              >
-                <span className='material-icons'
-                    style={{ filter: 'opacity(' + (this.state.ishovered ? '1)' : '0)') }}
-                  >
-                    check_box
-                </span>
-              </ButtonPrimary>
-            </form>
-          </div>
           }
       </div>
     );

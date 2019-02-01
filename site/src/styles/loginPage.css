@@ -7,6 +7,16 @@
   justify-content: center;
 }
 
+.login-picker {
+  text-align: center;
+  margin: 2% auto;
+  width: 30%;
+}
+
+.login-picker .button-primary {
+  margin: 2% auto!important;
+}
+
 .login-form {
   text-align: center;
   font-weight: 700;
