@@ -20,8 +20,9 @@ class LoginForm extends React.Component {
             </div>
             <form className='login-form'>
               {loginContent.french.inputs.map(input => {
+                let key = 0;
                 return (
-                  <div>
+                  <div key={key += .1}>
                     <label htmlFor={input.for}>
                       {input.label}
                     </label>

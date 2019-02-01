@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import About from './About';
-import Events from './Events';
+import Events from './events/Events';
 import FamilyTree from './FamilyTree';
 import Guest from './Guest';
-import Login from './Login';
-import Profile from './Profile';
+import Login from './login/Login';
+import Profile from './profile/Profile';
 import { directory } from '../assets/images/icons/directory';//set redux to make the links below dynamic
 import Gallery from './Gallery';
 

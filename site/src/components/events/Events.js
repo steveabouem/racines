@@ -1,8 +1,8 @@
 import React from 'react';
-import Navigation from './layout/menus/Navigation';
-import {content} from '../assets/content/navigationLinks'
+import Navigation from '../layout/menus/Navigation';
+import {content} from '../../assets/content/navigationLinks'
 
-export default class Profile extends React.Component {
+export default class Events extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -15,7 +15,7 @@ export default class Profile extends React.Component {
     return (
       <div className='page-container'>
         <Navigation links={content[this.state.language].links}/>
-        <h1>PROFILE SECTION</h1>
+        <h1>GUEST SECTION</h1>
       </div>
     );
   }

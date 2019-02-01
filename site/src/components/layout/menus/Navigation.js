@@ -14,10 +14,8 @@ export default class Navigation extends React.Component {
     return (
       <ul className='navigation-top'>
         {this.state.links.map(link => {
-          console.log(window.location, link.url);
-          
           return (
-            <li>
+            <li key={link.text}>
               <div className='nav-link-container'>
                 <div className='material-icons'
                   style={{ filter: 'opacity(' + (window.location.pathname === link.url ? '1)' : '0)')}}

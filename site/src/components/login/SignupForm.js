@@ -13,7 +13,7 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div className='section-container'>
-            <div classNam='section-headers'>
+            <div className='section-headers'>
               <h1>
                 {signUpContent.french.welcome}
               </h1>
@@ -21,7 +21,7 @@ class SignupForm extends React.Component {
             <form className='login-form'>
               {signUpContent.french.inputs.map(input => {
                 return (
-                  <div>
+                  <div key={input.for}>
                     <label htmlFor={input.for}>
                       {input.label}
                     </label>

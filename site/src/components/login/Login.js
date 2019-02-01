@@ -1,11 +1,11 @@
 import React from 'react';
-import Navigation from './layout/menus/Navigation';
-import LoginForm from './login/LoginForm';
-import SignUpForm from './login/SignupForm';
-import { content } from '../assets/content/navigationLinks';
-import Loader from './layout/modals/Loader';
-import ButtonPrimary from './layout/buttons/primary-submit';
-import { signUpContent, loginContent } from '../assets/content/loginForm';
+import Navigation from '../layout/menus/Navigation';
+import LoginForm from './LoginForm';
+import SignUpForm from './SignupForm';
+import { content } from '../../assets/content/navigationLinks';
+import Loader from '../layout/modals/Loader';
+import ButtonPrimary from '../layout/buttons/primary-submit';
+import { signUpContent, loginContent } from '../../assets/content/loginForm';
 
 export default class Login extends React.Component {
   constructor(props) {

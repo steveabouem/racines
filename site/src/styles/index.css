@@ -26,6 +26,14 @@ a {
   background: #f7faf4;
 }
 
+.page-container {
+    position: absolute;
+    height: 100%;
+    overflow: scroll;
+    width: 100%;
+    max-width: 100%;
+}
+
 .navigation-top {
   display: flex;
   position: sticky;
@@ -62,8 +70,15 @@ a {
   color: #589187;
 }
 
+.loader {
+  position: absolute;
+  top: 30%;
+  left: 48%;
+}
+
 .loader .material-icons {
-  animation: loader 0.7s ease-in-out infinite;
+  animation: loader 1.5s ease-in-out infinite;
+  font-size: 90px;
 }
 
 .two-buttons-horizontal {
