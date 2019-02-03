@@ -6,7 +6,8 @@ class LoginForm extends React.Component {
     constructor() {
         super();
         this.state = {
-            ishovered: false
+          ishovered: false,
+          language: 'french'
         };
     }
 
@@ -15,11 +16,11 @@ class LoginForm extends React.Component {
             <div className='section-container'>
             <div classNam='section-headers'>
               <h1>
-                {loginContent.french.welcome}
+                {loginContent[this.state.language].welcome}
               </h1>
             </div>
             <form className='login-form'>
-              {loginContent.french.inputs.map(input => {
+              {loginContent[this.state.language].inputs.map(input => {
                 let key = 0;
                 return (
                   <div key={key += .1}>

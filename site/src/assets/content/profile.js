@@ -1,6 +1,6 @@
 export const profileContent = {
     french: {
-        title: 'Votre Profile',
+        title: 'Votre Profil',
         events: 'Evennements',
         calendar: 'Calendrier',
         settings: 'Reglages',

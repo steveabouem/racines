@@ -1,0 +1,21 @@
+#profile .section-container {
+  height: 100%;
+  justify-content: start;
+}
+
+.section-container .events-feed-container,
+.section-container .birthdays-feed-container,
+.section-container .calendar-container {
+  width: 90%;
+  height: 40%;
+  background: #f4faf9;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 2% 0;
+}
+
+#profile .section-container-flat {
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}

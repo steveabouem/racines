@@ -1,12 +1,13 @@
 import React from 'react';
-import { signUpContent } from '../../assets/content/loginForm';
+import { signupContent } from '../../assets/content/loginForm';
 import ButtonPrimary from '../layout/buttons/primary-submit';
 
 class SignupForm extends React.Component {
     constructor() {
         super();
         this.state = {
-            ishovered: false
+          ishovered: false,
+          language: 'french',
         };
     }
 
@@ -15,11 +16,11 @@ class SignupForm extends React.Component {
             <div className='section-container'>
             <div className='section-headers'>
               <h1>
-                {signUpContent.french.welcome}
+                {signupContent[this.state.language].welcome}
               </h1>
             </div>
             <form className='login-form'>
-              {signUpContent.french.inputs.map(input => {
+              {signupContent[this.state.language].inputs.map(input => {
                 return (
                   <div key={input.for}>
                     <label htmlFor={input.for}>

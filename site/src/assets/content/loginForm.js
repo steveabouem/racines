@@ -12,7 +12,7 @@ export const loginContent = {
   }
 };
 
-export const signUpContent = {
+export const signupContent = {
   french: {
     inputs: [
       {for: 'username', type: 'text', label: 'Nom d\'Utilisateur', placeHolder: 'exp: JJacques'},
