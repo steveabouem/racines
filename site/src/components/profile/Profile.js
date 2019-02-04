@@ -3,7 +3,7 @@ import Navigation from '../layout/menus/Navigation';
 import Loader from '../layout/modals/Loader';
 import Calendar from './Calendar';
 import BirthdaysFeed from './BirthdaysFeed';
-import EventsFeed from './EventsFeed';
+import EventsCreator from './EventsCreator';
 import {content} from '../../assets/content/navigationLinks'
 import {profileContent} from '../../assets/content/profile';
 
@@ -36,11 +36,11 @@ export default class Profile extends React.Component {
                 </div>
               <div className='section-container-flat'>
                 <div className='half-container'>
-                  <Calendar />
-                  <BirthdaysFeed />
+                  <EventsCreator language={this.state.language}/>
+                  <BirthdaysFeed language={this.state.language}/>
                 </div>
                 <div className='half-container'>
-                  <EventsFeed />
+                  <Calendar language={this.state.language}/>
                 </div>
               </div>
           </div>

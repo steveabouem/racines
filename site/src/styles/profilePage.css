@@ -14,6 +14,22 @@
   margin: 2% 0;
 }
 
+.events-feed-container .section-headers,
+.birthdays-feed-container .section-headers,
+.calendar-container .section-headers {
+  background: #2b1a01eb;
+  padding: 2%;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 9px;
+}
+
+.birthdays-feed-container h4,
+.events-feed-container h4,
+.calendar-container h4 {
+  margin: 0;
+}
+
 #profile .section-container-flat {
   height: 100%;
   max-width: 100%;
