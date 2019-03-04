@@ -1,15 +1,15 @@
 import React from 'react';
 import Navigation from './layout/menus/Navigation';
+import ButtonPrimary from './layout/buttons/primary-submit';
 import { content } from '../assets/content/navigationLinks';
 import { guestContent } from '../assets/content/guestPage';
-import ButtonPrimary from './layout/buttons/primary-submit';
 
 export default class Guest extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
       isLoading: true,
-      language: 'french',//get it from redux props
+      language: 'french',// send it from context in Routes component
     };
   }
 

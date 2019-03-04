@@ -6,12 +6,15 @@ import FamilyTree from './FamilyTree';
 import Guest from './Guest';
 import Login from './login/Login';
 import Profile from './profile/Profile';
-import { directory } from '../assets/images/icons/directory';//set redux to make the links below dynamic
+// import { directory } from '../assets/images/icons/directory';//set redux to make the links below dynamic
 import Gallery from './Gallery';
+// import { LanguageContext } from '../context';
 
 export default class Routes extends React.Component {
   render() {
     return (
+      // <LanguageContext.Provider do I have methods here or 
+      //do I have a return value of language from within the component currently using the language contxt?
       <main id = "main-container">
       <Switch>
         <Route exact path ="/" component = {Guest} />
