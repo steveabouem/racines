@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+/* ==================CUSTOM SCROLLBAR================== */
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: $green1; 
+    border-radius: 5px;
+    &:hover {
+        background: $green7; 
+      }
+  }
+  /* ==================END================== */
