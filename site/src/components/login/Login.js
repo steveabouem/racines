@@ -5,7 +5,7 @@ import SignUpForm from './SignupForm';
 import { content } from '../../assets/content/navigationLinks';
 import Loader from '../layout/modals/Loader';
 import ButtonPrimary from '../layout/buttons/primary-submit';
-import { signUpContent, loginContent } from '../../assets/content/loginForm';
+import { signupContent, loginContent } from '../../assets/content/loginForm';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -50,18 +50,18 @@ export default class Login extends React.Component {
               <div className='login-picker'>
                 {
                   this.state.isNewUser ?
-                  signUpContent.french.processChangeTag
+                  signupContent[this.state.language].processChangeTag
                 :
-                  loginContent.french.processChangeTag
+                  loginContent[this.state.language].processChangeTag
                 }
                 <br/>
                 <ButtonPrimary
                     name={'refresh'}
                     value={
                             this.state.isNewUser ?
-                            signUpContent.french.processChange
+                            signupContent[this.state.language].processChange
                           :
-                            loginContent.french.processChange
+                            loginContent[this.state.language].processChange
                           }
                     onClick={this.switchForm}
                 />

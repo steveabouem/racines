@@ -1,12 +1,4 @@
-
-.section-container {
-  max-width: 85%;
-  min-width: 85%;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  justify-content: center;
-}
+@import "./variables.scss";
 
 .login-picker {
   text-align: center;
@@ -24,7 +16,9 @@
   margin: auto;
   width: 60%;
   display: flex;
+  border: 2px solid $dark2;
   flex-direction: column;
+  border-radius: 10px;
   justify-content: center;
   background: white;
 }
@@ -38,8 +32,13 @@
 .login-form input {
   width: 75%;
   height: 30px;
+  border: 2px solid $yellow_dark;
+  border-radius: 5px;
+  padding: 1%;
+  color: $green8;
 }
 
 .login-form .button-primary {
-  color: #c9fff6;
+  color: $green2;
+  margin: 2% auto;
 }

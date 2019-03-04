@@ -15,3 +15,13 @@
     color: inherit;
   }
 }
+
+@keyframes reveal {
+  0% {
+    filter: opacity(0.2);
+  }
+
+  100% {
+    filter: opacity(1);
+  }
+}

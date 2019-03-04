@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.css';
-import './styles/loginPage.css';
-import './styles/animations.css';
+import './styles/index.scss';
 import {store} from './store';
 import Root from './components/RootComponent';
 import * as serviceWorker from './serviceWorker';
